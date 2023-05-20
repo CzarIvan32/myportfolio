@@ -72,12 +72,12 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-var swiper = new Swiper(".service-slider", {
+var swiper = new Swiper(".servicing-slider", {
   spaceBetween: 20,
   grabCursor: true,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
