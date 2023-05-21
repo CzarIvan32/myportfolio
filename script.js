@@ -77,7 +77,7 @@ var swiper = new Swiper(".servicing-slider", {
   grabCursor: true,
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 1000,
     disableOnInteraction: false,
   },
   pagination: {
