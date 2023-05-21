@@ -54,7 +54,10 @@ ScrollReveal().reveal(
   ".home-img, .services-container, .portfolio-box, .contact form",
   { origin: "bottom" }
 );
-ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
+ScrollReveal().reveal(
+  ".home-content h1, .about-img, .contact-container .textform",
+  { origin: "left" }
+);
 ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 // type text
@@ -66,13 +69,13 @@ const typed = new Typed(".multiple-text", {
     "Technical Technician",
     "Blogger",
   ],
-  typeSpeed: 100,
+  typeSpeed: 50,
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
 });
 
-var swiper = new Swiper(".servicing-slider", {
+var swiper = new Swiper(".service-slider", {
   spaceBetween: 20,
   grabCursor: true,
   loop: true,
