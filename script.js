@@ -51,7 +51,7 @@ ScrollReveal({
 
 ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(
-  ".home-img, .services-container, .portfolio-box, .contact form",
+  ".home-img, .services-container, .achievements-box, .contact form",
   { origin: "bottom" }
 );
 ScrollReveal().reveal(
@@ -60,7 +60,7 @@ ScrollReveal().reveal(
 );
 ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
-// type text
+// type text effect
 const typed = new Typed(".multiple-text", {
   strings: [
     "Frontend Developer",
@@ -73,38 +73,4 @@ const typed = new Typed(".multiple-text", {
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
-});
-
-var swiper = new Swiper(".service-slider", {
-  spaceBetween: 20,
-  grabCursor: true,
-  loop: true,
-  autoplay: {
-    delay: 1000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    540: {
-      slidesPerView: 1,
-      centeredSlides: true,
-    },
-    768: {
-      slidesPerView: 2,
-      centeredSlides: false,
-    },
-    1024: {
-      slidesPerView: 3,
-      centeredSlides: true,
-    },
-  },
-});
-
-swiper.on("slideChange", function () {
-  swiper.autoplay.stop(); // Stop autoplay when the user interacts with the slider
-  swiper.autoplay.disableOnInteraction = false; // Re-enable autoplay after interaction
-  swiper.autoplay.start(); // Start autoplay again
 });

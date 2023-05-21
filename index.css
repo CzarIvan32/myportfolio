@@ -1,3 +1,4 @@
+/* UNIVERSAL SETTINGS START */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
@@ -30,14 +31,52 @@ body {
 section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
+  user-select: none;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.2rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.arrowicon a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.arrowicon a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.arrowicon a i {
+  font-size: 1.5rem;
+  color: var(--second-bg-color);
+}
+/* UNIVERSAL SETTINGS END */
+/* TOP NAVBAR START */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
+  padding: 1rem 9%;
   background: var(--bg-color);
   display: flex;
   justify-content: space-between;
@@ -60,10 +99,9 @@ section {
   position: relative;
   font-size: 1.3rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 3rem;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 40px;
   transition: 0.3s;
 }
 
@@ -102,7 +140,8 @@ section {
 #menu-icon:hover {
   color: var(--main-color);
 }
-
+/* TOP NAVBAR END */
+/* HOME SECTION START */
 .home {
   display: flex;
   justify-content: center;
@@ -169,24 +208,8 @@ span {
   color: var(--second-bg-color);
   box-shadow: 0 0 1rem var(--main-color);
 }
-
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  background: var(--main-color);
-  border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.2rem;
-  color: var(--second-bg-color);
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  transition: 0.5s ease;
-}
-
-.btn:hover {
-  box-shadow: none;
-}
-
+/* HOME SECTION END */
+/* ABOUT SECTION START */
 .about {
   display: flex;
   justify-content: center;
@@ -217,7 +240,8 @@ span {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
-
+/* ABOUT SECTION END */
+/* SERVICES SECTION END */
 .services h2 {
   margin-bottom: 5rem;
 }
@@ -259,23 +283,24 @@ span {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
-
-.portfolio {
+/* SERVICES SECTION END */
+/* ACHIEVEMENTS SECTION START */
+.achievements {
   background: var(--second-bg-color);
 }
 
-.portfolio h2 {
+.achievements h2 {
   margin-bottom: 4rem;
 }
 
-.portfolio-container {
+.achievements-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2.5rem;
 }
 
-.portfolio-container .portfolio-box {
+.achievements-container .achievements-box {
   position: relative;
   border-radius: 2rem;
   box-shadow: 0 0 1rem var(--bg-color);
@@ -283,16 +308,16 @@ span {
   display: flex;
 }
 
-.portfolio-box img {
+.achievements-box img {
   width: 100%;
   transition: 0.5s ease;
 }
 
-.portfolio-box:hover img {
+.achievements-box:hover img {
   transform: scale(1.1);
 }
 
-.portfolio-box .portfolio-layer {
+.achievements-box .achievements-layer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -309,20 +334,20 @@ span {
   transition: 0.5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer {
+.achievements-box:hover .achievements-layer {
   transform: translateY(0);
 }
 
-.portfolio-layer h4 {
+.achievements-layer h4 {
   font-size: 3rem;
 }
 
-.portfolio-layer p {
+.achievements-layer p {
   font-size: 1.6rem;
   margin: 0.3rem 0 1rem;
 }
 
-.portfolio-layer a {
+.achievements-layer a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -332,11 +357,12 @@ span {
   border-radius: 50%;
 }
 
-.portfolio-layer a i {
+.achievements-layer a i {
   font-size: 2rem;
   color: var(--second-bg-color);
 }
-
+/* ACHIEVEMENTS SECTION END */
+/* CONTACT SECTION START */
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -353,6 +379,7 @@ span {
   margin-bottom: 3rem;
   padding-top: 1.5rem;
   font-size: 1.6rem;
+  letter-spacing: 0.1rem;
 }
 
 .contact .textform h4 {
@@ -392,6 +419,7 @@ span {
 }
 
 .contact form textarea {
+  color: var(--main-color);
   resize: none;
 }
 
@@ -400,45 +428,95 @@ span {
   cursor: pointer;
   border: none;
 }
-
+/* CONTACT SECTION END */
+/* FOOTER SECTION START */
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 9%;
+  padding: 0.5rem 9%;
   background: var(--second-bg-color);
 }
 
 .footer-text p {
   font-size: 1.6rem;
 }
+/* FOOTER SECTION END */
+/* INDEX HTML END */
 
-.arrowicon a {
-  display: inline-flex;
+/* EXTRAS HTML START */
+/* GRAPHICS SECTION START */
+.graphics {
+  max-height: max-content;
+}
+
+.accordionform {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0.7rem;
-  background: var(--main-color);
-  border-radius: 0.8rem;
+}
+
+.accordioncontent {
+  width: 70rem;
+  padding: 3rem;
+}
+
+.accordioncontent li {
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 8px;
+  color: var(--text-color);
+  border: 0.2rem solid var(--bg-color);
+  background-color: var(--second-bg-color);
   transition: 0.5s ease;
 }
 
-.arrowicon a:hover {
-  box-shadow: 0 0 1rem var(--main-color);
+.accordioncontent li:hover {
+  border-color: var(--main-color);
 }
 
-.arrowicon a i {
-  font-size: 1.5rem;
-  color: var(--second-bg-color);
+.accordioncontent li label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px;
 }
 
-/* SERVICES HTML START */
+.accordioncontent label::before {
+  content: "+";
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
 
-/* SERVICES END START */
+.accordioncontent .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
 
-/* BREAKPOINTS */
+.accordioncontent .content p {
+  display: flex;
+  font-size: 1.2rem;
+}
 
+.accordioncontent input[type="radio"] {
+  display: none;
+}
+
+.accordioncontent input[type="radio"]:checked + label + .content {
+  max-height: 300px;
+  padding: 10px 10px 20px;
+}
+
+.accordioncontent input[type="radio"]:checked + label::before {
+  content: "-";
+}
+/* GRAPHICS SECTION END */
+/* EXTRAS HTML END */
+
+/* RESPONSIVE */
 @media (max-width: 1200px) {
   html {
     font-size: 55%;

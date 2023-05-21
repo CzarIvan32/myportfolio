@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITD Portfolio - Services</title>
+
+    <!--Box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!--Custom css-->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!--Header Design-->
+    <header class="header">
+      <div class="arrowicon">
+        <a href="index.html#services"><i class="bx bx-arrow-back"></i></a>
+      </div>
+    </header>
+
+    <!-- Graphics section design-->
+    <section class="graphics" id="graphics">
+      <h2 class="heading">As Graphics <span>Artist</span></h2>
+      <div class="accordionform">
+        <div class="accordioncontent">
+          <ul class="accordion">
+            <li>
+              <input type="radio" name="accordion" id="first" />
+              <label for="first">Municiapal wide Government Employee IDs</label>
+              <div class="content">
+                <p>This was my 1st and one of the biggest projects I worked for. I have made Identification Cards for all government employees in all barangays under the Municipality of Surallah. Although I do not have the proof, but sure is I have done this work as my legacy, some employees do remember me when I visit their respective offices. That was around 800+ IDs issued within 2 weeks.</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="accordion">
+            <li>
+              <input type="radio" name="accordion" id="second" />
+              <label for="second"
+                >Private/Public schools Students and Employees IDs</label
+              >
+              <div class="content">
+                <p>After my project to the government, I have catered one of the prestigious school in my localities. </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="accordioncontent">
+          <ul class="accordion">
+            <li>
+              <input type="radio" name="accordion" id="nineth" />
+              <label for="nineth"
+                >Licensure Examination for Psychologists</label
+              >
+              <div class="content">
+                <p>(Virtual)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development section design-->
+    <section class="development" id="development">
+      <h2 class="heading">As UI/UX <span>Designer</span></h2>
+      <div class="accordion">
+        <div class="accordionleft"></div>
+        <div class="accordionright"></div>
+      </div>
+    </section>
+
+    <!-- Technical section design-->
+    <section class="technical" id="technical">
+      <h2 class="heading">As Technical <span>Technician</span></h2>
+      <div class="accordion">
+        <div class="accordionleft"></div>
+        <div class="accordionright"></div>
+      </div>
+    </section>
+
+    <!-- Accordion -->
+    <script>
+      const radioButtons = document.querySelectorAll(
+        '.accordioncontent input[type="radio"]'
+      );
+
+      radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener("click", function () {
+          if (this.previousValue === this.value) {
+            this.checked = false;
+            this.previousValue = null;
+          } else {
+            this.previousValue = this.value;
+          }
+        });
+      });
+    </script>
+
+    <!--Custom JS-->
+    <script src="script.js"></script>
+  </body>
+</html>
