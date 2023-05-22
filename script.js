@@ -51,14 +51,14 @@ ScrollReveal({
 
 ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(
-  ".home-img, .services-container, .achievements-box, .contact form",
+  ".home-img, .services-container, .extras-box, .contact form",
   { origin: "bottom" }
 );
 ScrollReveal().reveal(
-  ".home-content h1, .about-img, .contact-container .textform",
+  ".home-content h1, .intro-img, .contact-container .textform",
   { origin: "left" }
 );
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+ScrollReveal().reveal(".home-content p, .intro-content", { origin: "right" });
 
 // type text effect
 const typed = new Typed(".multiple-text", {
