@@ -18,6 +18,7 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --main-dark: #000538;
 }
 
 html {
@@ -337,6 +338,7 @@ span {
 
 .extras-box:hover img {
   transform: scale(1.1);
+  filter: blur(0.5rem);
 }
 
 .extras-box .extras-layer {
@@ -345,7 +347,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-dark));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,11 +363,12 @@ span {
 }
 
 .extras-layer h4 {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: var(--main-color);
 }
 
 .extras-layer p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin: 0.3rem 0 1rem;
 }
 
@@ -381,7 +384,11 @@ span {
 
 .extras-layer a i {
   font-size: 2rem;
-  color: var(--second-bg-color);
+  color: var(--bg-color);
+}
+
+.extras-layer a:hover {
+  background: var(--main-color);
 }
 /* EXTRAS SECTION END */
 /* CONTACT SECTION START */
@@ -546,7 +553,7 @@ span {
 /* EXTRAS HTML START */
 .webdevelopment .slide {
   height: 50rem;
-  background-color: var(--light-bg);
+  background-color: var(--second-bg-color);
   border-radius: 3rem;
   text-align: center;
   padding: 2rem;
@@ -561,21 +568,21 @@ span {
 .webdevelopment .slide h3 {
   margin: 1.5rem 0;
   font-size: 2rem;
-  color: var(--white);
+  color: var(--main-color);
 }
 
 .webdevelopment .slide p {
   line-height: 2;
   font-size: 1.6rem;
-  color: var(--light-white);
+  color: var(--text-color);
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--white);
+  background-color: var(--text-color);
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--green);
+  background-color: var(--main-color);
 }
 /* EXTRAS HTML END */
 /* RESPONSIVE */
