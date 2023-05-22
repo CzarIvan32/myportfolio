@@ -55,18 +55,18 @@ ScrollReveal().reveal(
   { origin: "bottom" }
 );
 ScrollReveal().reveal(
-  ".home-content h1, .intro-img, .contact-container .textform",
+  ".home-content h1, .about-img, .contact-container .textform",
   { origin: "left" }
 );
-ScrollReveal().reveal(".home-content p, .intro-content", { origin: "right" });
+ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 // type text effect
 const typed = new Typed(".multiple-text", {
   strings: [
-    "Frontend Developer",
-    "Youtuber",
     "Graphics Artist",
-    "Technical Technician",
+    "Technician",
+    "UI/UX Web Designer",
+    "Youtuber",
     "Blogger",
   ],
   typeSpeed: 50,

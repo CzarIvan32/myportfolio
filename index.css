@@ -69,6 +69,20 @@ section {
   font-size: 1.5rem;
   color: var(--second-bg-color);
 }
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5rem;
+}
 /* UNIVERSAL SETTINGS END */
 /* TOP NAVBAR START */
 .header {
@@ -170,6 +184,10 @@ section {
   font-weight: 700;
 }
 
+.home-content h3:nth-child(1) {
+  color: var(--main-color);
+}
+
 .home-content h3:nth-of-type(2) {
   margin-bottom: 2rem;
 }
@@ -209,8 +227,8 @@ span {
   box-shadow: 0 0 1rem var(--main-color);
 }
 /* HOME SECTION END */
-/* INTRO SECTION START */
-.intro {
+/* ABOUT SECTION START */
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +236,7 @@ span {
   background: var(--second-bg-color);
 }
 
-.intro-img {
+.about-img img {
   width: 35vw;
 }
 
@@ -227,26 +245,27 @@ span {
   font-size: 4.5rem;
 }
 
-.intro-content h2 {
+.about-content h2 {
   text-align: left;
   line-height: 1.2;
 }
 
-.intro-content h3 {
+.about-content h3 {
   font-size: 2.6rem;
+  color: var(--main-color);
 }
 
-.intro-content p {
+.about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
-/* INTRO SECTION END */
 /* ABOUT SECTION END */
-.about h2 {
+/* PARTICULARS SECTION END */
+.particulars h2 {
   margin-bottom: 5rem;
 }
 
-.about-container {
+.particulars-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,7 +273,7 @@ span {
   gap: 2rem;
 }
 
-.about-container .about-box {
+.particulars-container .particulars-box {
   flex: 1 1 30rem;
   background-color: var(--second-bg-color);
   padding: 3rem 2rem 4rem;
@@ -265,25 +284,25 @@ span {
   transition: 0.5s ease;
 }
 
-.about-container .about-box:hover {
+.particulars-container .particulars-box:hover {
   border-color: var(--main-color);
   transform: scale(1.02);
 }
 
-.about-box i {
+.particulars-box i {
   font-size: 7rem;
   color: var(--main-color);
 }
 
-.about-box h3 {
+.particulars-box h3 {
   font-size: 2.6rem;
 }
 
-.about-box p {
+.particulars-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
-/* ABOUT SECTION END */
+/* PARTICULARS SECTION END */
 /* EXTRAS SECTION START */
 .extras {
   background: var(--second-bg-color);
@@ -408,7 +427,7 @@ span {
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
-  color: var(--text-color);
+  color: var(--main-color);
   background: var(--second-bg-color);
   border-radius: 0.6rem;
   margin: 0.7rem 0;
@@ -419,7 +438,6 @@ span {
 }
 
 .contact form textarea {
-  color: var(--main-color);
   resize: none;
 }
 
@@ -532,7 +550,7 @@ span {
     padding: 10rem 3% 2rem;
   }
 
-  .about {
+  .particulars {
     padding-bottom: 7rem;
   }
 
@@ -594,7 +612,7 @@ span {
     margin-top: 4rem;
   }
 
-  .intro {
+  .about {
     flex-direction: column-reverse;
   }
 
@@ -603,7 +621,7 @@ span {
     margin-top: 4rem;
   }
 
-  .about h2 {
+  .particulars h2 {
     margin-bottom: 3rem;
   }
 
@@ -624,6 +642,7 @@ span {
 
   .contact .textform {
     margin: 1rem auto;
+    text-align: center;
   }
 }
 
@@ -632,7 +651,7 @@ span {
     grid-template-columns: 1fr;
   }
 
-  .about-container .about-box {
+  .particulars-container .about-box {
     height: auto;
   }
 }
@@ -654,6 +673,12 @@ span {
 
   .about-img img {
     width: 90vw;
+  }
+
+  .contact .textform {
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    font-size: 1.3rem;
   }
 
   .footer {
