@@ -74,3 +74,37 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+var swiper = new Swiper(".webdevelopment-slider", {
+  spaceBetween: 20,
+  grabCursor: true,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    540: {
+      slidesPerView: 1,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+    1024: {
+      slidesPerView: 3,
+      centeredSlides: true,
+    },
+  },
+});
+
+swiper.on("slideChange", function () {
+  swiper.autoplay.stop(); // Stop autoplay when the user interacts with the slider
+  swiper.autoplay.disableOnInteraction = false; // Re-enable autoplay after interaction
+  swiper.autoplay.start(); // Start autoplay again
+});

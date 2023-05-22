@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITD Portfolio - Extras</title>
+
+    <!--Box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- swiper css link -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!--Custom css-->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!--Header Design-->
+    <header class="header">
+      <div class="arrowicon">
+        <a href="index.html#extras"><i class="bx bx-arrow-back"></i></a>
+      </div>
+    </header>
+
+    <!-- Web development design -->
+    <section class="webdevelopment" id="webdevelopment">
+      <h1 class="heading">Web Dev <span>Templates</span></h1>
+      <div class="swiper webdevelopment-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <img src="/images/course1-img.svg" alt="" />
+            <h3>Basic Driver Education</h3>
+            <p>
+              Designed for novice drivers who are starting their driving
+              journey.
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="/images/course2-img.svg" alt="" />
+            <h3>Road Test Preparation</h3>
+            <p>
+              Designed to help you prepare for your driver's license road test.
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="/images/course3-img.svg" alt="" />
+            <h3>Defensive Driving</h3>
+            <p>
+              Ideal for licensed drivers who want to enhance their driving
+              skills and become more confident and defensive drivers.
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="/images/course4-img.svg" alt="" />
+            <h3>Refresher Courses</h3>
+            <p>
+              Tailored for licensed drivers who may need to brush up on their
+              driving skills or improve specific areas of their driving.
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="/images/course5-img.svg" alt="" />
+            <h3>Specialized Courses</h3>
+            <p>
+              Tailored to specific driving needs, such as winter driving, night
+              driving, or driving in challenging road conditions.
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="/images/course6-img.svg" alt="" />
+            <h3>Customized Instruction</h3>
+            <p>
+              We understand that every student is unique, and we offer
+              customized instruction to meet your individual needs.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- Script -->
+    <script>
+      var swiper = new Swiper(".webdevelopment-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 2,
+            centeredSlides: false,
+          },
+          1024: {
+            slidesPerView: 3,
+            centeredSlides: true,
+          },
+        },
+      });
+
+      swiper.on("slideChange", function () {
+        swiper.autoplay.stop(); // Stop autoplay when the user interacts with the slider
+        swiper.autoplay.disableOnInteraction = false; // Re-enable autoplay after interaction
+        swiper.autoplay.start(); // Start autoplay again
+      });
+    </script>
+
+    <!--Custom JS-->
+    <script src="script.js"></script>
+
+    <!-- swiper js link -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>

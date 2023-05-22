@@ -7,8 +7,10 @@
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
+  border: none;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  transition: 0.2s linear;
 }
 
 :root {
@@ -21,6 +23,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -466,7 +469,7 @@ span {
 /* PARTICULARS HTML START */
 /* GRAPHICS SECTION START */
 .graphics {
-  max-height: max-content;
+  background-color: var(--bg-color);
 }
 
 .accordionform {
@@ -531,9 +534,50 @@ span {
 .accordioncontent input[type="radio"]:checked + label::before {
   content: "-";
 }
-/* PARTICULARS SECTION END */
-/* EXTRAS HTML END */
 
+.development {
+  background-color: var(--second-bg-color);
+}
+
+.development .accordioncontent li {
+  background-color: var(--bg-color);
+}
+/* PARTICULARS SECTION END */
+/* EXTRAS HTML START */
+.webdevelopment .slide {
+  height: 50rem;
+  background-color: var(--light-bg);
+  border-radius: 3rem;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.webdevelopment .slide img {
+  height: 25rem;
+  width: 100%;
+}
+
+.webdevelopment .slide h3 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.webdevelopment .slide p {
+  line-height: 2;
+  font-size: 1.6rem;
+  color: var(--light-white);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--white);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--green);
+}
+/* EXTRAS HTML END */
 /* RESPONSIVE */
 @media (max-width: 1200px) {
   html {
@@ -685,6 +729,11 @@ span {
     margin-bottom: 1.5rem;
     padding-top: 1rem;
     font-size: 1.3rem;
+  }
+
+  .accordioncontent li label {
+    font-size: 1.1rem;
+    padding: 3px;
   }
 
   .footer {
