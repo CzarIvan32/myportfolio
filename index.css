@@ -463,7 +463,7 @@ span {
 /* FOOTER SECTION END */
 /* INDEX HTML END */
 
-/* EXTRAS HTML START */
+/* PARTICULARS HTML START */
 /* GRAPHICS SECTION START */
 .graphics {
   max-height: max-content;
@@ -531,7 +531,7 @@ span {
 .accordioncontent input[type="radio"]:checked + label::before {
   content: "-";
 }
-/* GRAPHICS SECTION END */
+/* PARTICULARS SECTION END */
 /* EXTRAS HTML END */
 
 /* RESPONSIVE */
@@ -643,6 +643,12 @@ span {
   .contact .textform {
     margin: 1rem auto;
     text-align: center;
+  }
+
+  .accordioncontent li {
+    padding: 10px;
+    margin: 1.5rem;
+    border-radius: 5px;
   }
 }
 

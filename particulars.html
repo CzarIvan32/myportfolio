@@ -61,21 +61,39 @@
               <div class="content">
                 <p>
                   After my project to the government, I have catered one of the
-                  prestigious school in my localities.
+                  prestigious school in my localities. Listing of 2 private
+                  schools and 1 government school. As a history of my work done,
+                  this is one of my legacy as a graphics artist.
                 </p>
               </div>
             </li>
           </ul>
-        </div>
-        <div class="accordioncontent">
           <ul class="accordion">
             <li>
-              <input type="radio" name="accordion" id="nineth" />
-              <label for="nineth"
-                >Licensure Examination for Psychologists</label
-              >
+              <input type="radio" name="accordion" id="third" />
+              <label for="third">Tarpaulins</label>
               <div class="content">
-                <p>(Virtual)</p>
+                <p>
+                  I also cater lay-out and production of tarpaulins. In-line
+                  with my work and profession, my customers both local and
+                  international contact me personally and work with their
+                  request and customized tarpaulins, business related and/or
+                  personal use.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul class="accordion">
+            <li>
+              <input type="radio" name="accordion" id="fourth" />
+              <label for="fourth">Photo Development Business</label>
+              <div class="content">
+                <p>
+                  I have worked on a photo development company, a franchised
+                  branch from Mitsubishi and Fugi, I know how to operate their
+                  machine for developing photos. From IDs to whole body and
+                  family photo development and editing too.
+                </p>
               </div>
             </li>
           </ul>
@@ -107,6 +125,22 @@
         '.accordioncontent input[type="radio"]'
       );
 
+      // Function to handle click event outside the radio button(s)
+      function handleOutsideClick(event) {
+        const isOutside = Array.from(radioButtons).every(function (
+          radioButton
+        ) {
+          return !radioButton.contains(event.target);
+        });
+
+        if (isOutside) {
+          radioButtons.forEach(function (radioButton) {
+            radioButton.checked = false;
+            radioButton.previousValue = null;
+          });
+        }
+      }
+
       radioButtons.forEach(function (radioButton) {
         radioButton.addEventListener("click", function () {
           if (this.previousValue === this.value) {
@@ -117,6 +151,9 @@
           }
         });
       });
+
+      // Attach the click event listener to the document
+      document.addEventListener("click", handleOutsideClick);
     </script>
 
     <!--Custom JS-->
