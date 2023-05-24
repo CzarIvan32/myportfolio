@@ -108,3 +108,19 @@ swiper.on("slideChange", function () {
   swiper.autoplay.disableOnInteraction = false; // Re-enable autoplay after interaction
   swiper.autoplay.start(); // Start autoplay again
 });
+
+//  google search
+function redirectToGoogle() {
+  var query = document.querySelector(".query").value;
+  if (query) {
+    var searchUrl =
+      "https://www.google.com/search?q=" + encodeURIComponent(query);
+    window.location.href = searchUrl;
+  }
+}
+
+function handleKeyDown(event) {
+  if (event.key === "Enter") {
+    redirectToGoogle();
+  }
+}
