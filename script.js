@@ -115,7 +115,7 @@ function redirectToGoogle() {
   if (query) {
     var searchUrl =
       "https://www.google.com/search?q=" + encodeURIComponent(query);
-    window.location.href = searchUrl;
+    window.open(searchUrl, "_blank");
   }
 }
 
@@ -124,3 +124,29 @@ function handleKeyDown(event) {
     redirectToGoogle();
   }
 }
+
+function toggleIcon() {
+  var queryInput = document.querySelector(".query");
+  var xIcon = document.querySelector(".bx-x-circle");
+
+  if (queryInput.value === "") {
+    xIcon.style.display = "none";
+  } else {
+    xIcon.style.display = "inline-block";
+  }
+}
+
+function clearSearch() {
+  var queryInput = document.querySelector(".query");
+  var xIcon = document.querySelector(".bx-x-circle");
+
+  queryInput.value = "";
+  xIcon.style.display = "none";
+}
+
+var queryInput = document.querySelector(".query");
+var searchBtn = document.querySelector(".searchBtn");
+
+searchBtn.addEventListener("click", redirectToGoogle);
+queryInput.addEventListener("keydown", handleKeyDown);
+toggleIcon();

@@ -162,11 +162,13 @@ section {
 .searchBx {
   display: flex;
   margin-left: 2rem;
+  align-items: center;
 }
 
 .searchBx .query {
   width: 30rem;
-  padding: 0 0.5rem 0 2rem;
+  height: 3.35rem;
+  padding: 0 0.5rem 0 3.5rem;
   font-size: 1.3rem;
   color: var(--main-color);
   background: var(--second-bg-color);
@@ -174,20 +176,35 @@ section {
   border-bottom-left-radius: 3rem;
 }
 
+.bx-x-circle {
+  display: none;
+  position: absolute;
+  padding: 0 0 0 1rem;
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.bx-x-circle:hover {
+  cursor: pointer;
+}
+
+.searchBx input {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
 .bton button {
   display: inline-block;
   padding: 0.5rem 1.5rem;
+  height: 3.5rem;
   background: var(--main-color);
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
   box-shadow: 0 0 1rem var(--main-color);
   color: var(--second-bg-color);
-  transition: 0.5s ease;
 }
 
 .bton button:hover {
   cursor: pointer;
-  box-shadow: none;
 }
 
 /* TOP NAVBAR END */
@@ -650,6 +667,16 @@ span {
   }
 }
 
+@media (max-width: 871px) {
+  .navbar a {
+    font-size: 1.3rem;
+  }
+
+  .searchBx .query {
+    width: 15rem;
+  }
+}
+
 @media (max-width: 768px) {
   #menu-icon {
     display: block;
@@ -732,6 +759,10 @@ span {
     padding: 10px;
     margin: 1.5rem;
     border-radius: 5px;
+  }
+
+  .searchBx .query {
+    width: 30rem;
   }
 }
 

@@ -33,7 +33,10 @@
           class="query"
           placeholder="Google Search"
           value=""
+          onkeydown="handleKeyDown(event)"
+          oninput="toggleIcon()"
         />
+        <i class="bx bx-x-circle" onclick="clearSearch()"></i>
         <div class="bton">
           <button class="searchBtn" onclick="redirectToGoogle()">
             <i class="bx bx-search-alt"></i>
